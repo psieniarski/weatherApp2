@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Text from '../components/core/Text';
-import TextSymbol from '../components/core/TextSymbol';
-import TextNumber from '../components/core/TextNumber';
+import Text from '../core/Text';
+import TextSymbol from '../core/TextSymbol';
+import TextNumber from '../core/TextNumber';
 
-import TextInput from '../components/core/form/TextInput';
-import WeatherIcon from '../components/WeatherIcon';
+import TextInput from '../core/form/TextInput';
+import WeatherIcon from './Icon';
 
-import Column from '../components/core/layout/Column';
-import Row from '../components/core/layout/Row';
+import Column from '../core/layout/Column';
+import Row from '../core/layout/Row';
 
-const WeatherDetails = ({
+const Details = ({
   icon,
   temperature,
   temperatureMin,
@@ -70,4 +70,4 @@ const WeatherDetails = ({
   );
 };
 
-export default WeatherDetails;
+export default Details;
