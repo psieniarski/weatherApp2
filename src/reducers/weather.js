@@ -1,4 +1,5 @@
 import { FETCH_WEATHER_SUCCESS } from '../actions/actionTypes';
+import iconMapping from '../helpers/iconMapping';
 
 export const initialState = {
   icon: 'default',
@@ -11,7 +12,7 @@ export function weather(state = initialState, action) {
   switch (action.type) {
     case FETCH_WEATHER_SUCCESS:
       return {
-        icon: action.payload.weather[0].icon,
+        icon: iconMapping[action.payload.weather[0].id],
         temperature: action.payload.main.temp,
         temperatureMin: action.payload.main.temp_min,
         temperatureMax: action.payload.main.temp_max

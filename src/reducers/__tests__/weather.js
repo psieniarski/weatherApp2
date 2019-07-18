@@ -10,7 +10,7 @@ describe('weather reducer', () => {
       weather([], {
         type: FETCH_WEATHER_SUCCESS,
         payload: {
-          weather: [{ icon: 'test' }],
+          weather: [{ id: 201 }],
           main: {
             temp: 0,
             temp_min: 1,
@@ -19,7 +19,7 @@ describe('weather reducer', () => {
         }
       })
     ).toEqual({
-      icon: 'test',
+      icon: 'wi-thunderstorm',
       temperature: 0,
       temperatureMin: 1,
       temperatureMax: 2
