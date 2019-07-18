@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles/styles.scss';
+
 import Container from './components/core/layout/Container';
 import Column from './components/core/layout/Column';
 import Row from './components/core/layout/Row';
