@@ -37,15 +37,15 @@ const WeatherContainer = props => {
       </Column>
       <Column>
         <Row>
-          Temperature: {temperature}
+          Temperature: <strong>{temperature}&deg;C</strong>
           <Icon />
         </Row>
         <Row>
-          Min temperature {temperatureMin}
+          Min temperature <strong>{temperatureMin}&deg;C</strong>
           <Icon />
         </Row>
         <Row>
-          Max temperature {temperatureMax}
+          Max temperature <strong>{temperatureMax}&deg;C</strong>
           <Icon />
         </Row>
       </Column>

@@ -1,7 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Knewave&display=swap);
 @import '~weather-icons/css/weather-icons.css';
 
 html {
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Knewave', sans-serif;
+  background: #5089da;
+  color: white;
+  font-size: 20pt;
 }
 
 .container {
@@ -12,6 +20,10 @@ html {
   flex: 1;
 }
 
+.icon {
+  color: white;
+}
+
 .icon-xl {
-  font-size: 50pt;
+  font-size: 200pt;
 }
