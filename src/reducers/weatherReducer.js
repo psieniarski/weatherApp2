@@ -9,7 +9,7 @@ export const initialState = {
   name: ''
 };
 
-export function weather(state = initialState, action) {
+export function weatherReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_WEATHER_SUCCESS:
       return {
