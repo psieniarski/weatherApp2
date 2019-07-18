@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Icon = ({ name }) => {
-  return <i className={`icon ${name}`}></i>;
+  return <i className={`wi ${name} icon-xl`}></i>;
 };
 
 Icon.propTypes = {
