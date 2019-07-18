@@ -1,5 +1,11 @@
 import React from 'react';
 
+import {
+  TEMPERATURE_MESSAGE,
+  MIN_TEMPERATURE_MESSAGE,
+  MAX_TEMPERATURE_MESSAGE
+} from '../messages';
+
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchWeatherData } from '../actions';
 
@@ -42,13 +48,13 @@ const WeatherContainer = props => {
       </Column>
       <Column>
         <Row>
-          <Text text="Temperature" />
+          <Text text={TEMPERATURE_MESSAGE} />
         </Row>
         <Row>
-          <Text text="Min temperature" />
+          <Text text={MIN_TEMPERATURE_MESSAGE} />
         </Row>
         <Row>
-          <Text text="Max temperature" />
+          <Text text={MAX_TEMPERATURE_MESSAGE} />
         </Row>
       </Column>
       <Column>
