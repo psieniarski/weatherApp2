@@ -1,14 +1,14 @@
 @import '~weather-icons/css/weather-icons.css';
 @import '~milligram/dist/milligram.css';
 
-// Google Fonts
+$base-color: #9b4dca;
 
 html {
   box-sizing: border-box;
 }
 
 body {
-  color: #9b4dca;
+  color: $base-color;
   font-size: 15pt;
 }
 
@@ -22,7 +22,7 @@ body {
 }
 
 .icon {
-  color: #9b4dca;
+  color: $base-color;
 }
 
 .icon-xl {
