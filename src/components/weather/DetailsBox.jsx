@@ -57,7 +57,7 @@ const DetailsBox = ({ icon, temperature, temperatureMin, temperatureMax }) => {
 DetailsBox.propTypes = {
   icon: PropTypes.string,
   temperature: PropTypes.number,
-  temperatureMin: PropTypes.string,
-  temperatureMax: PropTypes.string
+  temperatureMin: PropTypes.number,
+  temperatureMax: PropTypes.number
 };
 export default DetailsBox;
