@@ -34,7 +34,8 @@ const SearchBox = ({ onChange, placeholder, name }) => {
 
 SearchBox.propTypes = {
   onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  name: PropTypes.string
 };
 
 export default SearchBox;

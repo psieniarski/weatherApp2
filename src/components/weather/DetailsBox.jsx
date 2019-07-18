@@ -11,7 +11,7 @@ import WeatherIcon from './Icon';
 import Column from '../core/layout/Column';
 import Row from '../core/layout/Row';
 
-const Details = ({ icon, temperature, temperatureMin, temperatureMax }) => {
+const DetailsBox = ({ icon, temperature, temperatureMin, temperatureMax }) => {
   return (
     <React.Fragment>
       <Column>
@@ -54,4 +54,10 @@ const Details = ({ icon, temperature, temperatureMin, temperatureMax }) => {
   );
 };
 
-export default Details;
+DetailsBox.propTypes = {
+  icon: PropTypes.string,
+  temperature: PropTypes.number,
+  temperatureMin: PropTypes.string,
+  temperatureMax: PropTypes.string
+};
+export default DetailsBox;
