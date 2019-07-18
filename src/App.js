@@ -2,21 +2,10 @@ import React from 'react';
 
 import './styles/styles.scss';
 
-import Container from './components/core/layout/Container';
-import Column from './components/core/layout/Column';
-import Row from './components/core/layout/Row';
-import Icon from './components/core/Icon';
+import WeatherContainer from './containers/WeatherContainer';
 
 function App() {
-  return (
-    <Container>
-      <Column>
-        <Row>
-          Weather <Icon />
-        </Row>
-      </Column>
-    </Container>
-  );
+  return <WeatherContainer />;
 }
 
 export default App;
