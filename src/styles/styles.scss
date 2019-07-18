@@ -1,17 +1,26 @@
 @import '~weather-icons/css/weather-icons.css';
+@import '~milligram/dist/milligram.css';
+
+// Google Fonts
+@import url(
+  http://fonts.googleapis.com/css?family=Roboto:300,
+  300italic,
+  700,
+  700italic
+);
 
 html {
   box-sizing: border-box;
 }
 
 body {
-  background: #5089da;
-  color: white;
-  font-size: 20pt;
+  color: #9b4dca;
+  font-size: 15pt;
 }
 
 .container {
   display: flex;
+  margin-top: 100px;
 }
 
 .column {
@@ -19,7 +28,7 @@ body {
 }
 
 .icon {
-  color: white;
+  color: #9b4dca;
 }
 
 .icon-xl {

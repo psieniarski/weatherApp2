@@ -9,16 +9,13 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchWeatherData } from '../actions';
 
+import TextInput from '../components/core/form/TextInput';
+
 import Container from '../components/core/layout/Container';
 import Column from '../components/core/layout/Column';
 import Row from '../components/core/layout/Row';
 
-import Text from '../components/core/Text';
-import TextSymbol from '../components/core/TextSymbol';
-import TextNumber from '../components/core/TextNumber';
-
-import TextInput from '../components/core/form/TextInput';
-import WeatherIcon from '../components/WeatherIcon';
+import WeatherDetails from '../components/WeatherDetails';
 
 const WeatherContainer = props => {
   const dispatch = useDispatch();
@@ -34,51 +31,26 @@ const WeatherContainer = props => {
     <Container>
       <Column>
         <Row>
-          <TextInput
-            onChange={event => {
-              onQueryChange({ q: event.target.value });
-            }}
-          />
+          <form>
+            <TextInput
+              type="text"
+              placeholder="City"
+              onChange={event => {
+                onQueryChange({ q: event.target.value });
+              }}
+            />
+          </form>
         </Row>
       </Column>
-      <Column>
-        <Row>
-          <WeatherIcon name={icon} size="xl" />
-        </Row>
-      </Column>
-      <Column>
-        <Row>
-          <Text text={TEMPERATURE_MESSAGE} />
-        </Row>
-        <Row>
-          <Text text={MIN_TEMPERATURE_MESSAGE} />
-        </Row>
-        <Row>
-          <Text text={MAX_TEMPERATURE_MESSAGE} />
-        </Row>
-      </Column>
-      <Column>
-        <Row>
-          <TextNumber number={temperature} round="floor" />
-        </Row>
-        <Row>
-          <TextNumber number={temperatureMin} round="ceil" />
-        </Row>
-        <Row>
-          <TextNumber number={temperatureMax} round="floor" />
-        </Row>
-      </Column>
-      <Column>
-        <Row>
-          <TextSymbol name="degreeCelcius" />
-        </Row>
-        <Row>
-          <TextSymbol name="degreeCelcius" />
-        </Row>
-        <Row>
-          <TextSymbol name="degreeCelcius" />
-        </Row>
-      </Column>
+      <WeatherDetails
+        icon={icon}
+        temperature={temperature}
+        temperatureMin={temperatureMin}
+        temperatureMax={temperatureMax}
+        temperatureMessage={TEMPERATURE_MESSAGE}
+        temperatureMinMessage={MIN_TEMPERATURE_MESSAGE}
+        temperatureMaxMessage={MAX_TEMPERATURE_MESSAGE}
+      />
     </Container>
   );
 };

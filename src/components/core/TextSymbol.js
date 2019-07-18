@@ -8,7 +8,7 @@ const symbols = {
 };
 
 const TextSymbol = ({ name }) => {
-  return <React.Fragment>{symbols[name]} </React.Fragment>;
+  return <React.Fragment> {symbols[name]} </React.Fragment>;
 };
 
 Text.propTypes = {
