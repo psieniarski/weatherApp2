@@ -2,10 +2,11 @@ import { FETCH_WEATHER_SUCCESS } from '../actions/actionTypes';
 import iconMapping from '../helpers/iconMapping';
 
 export const initialState = {
-  icon: 'default',
+  icon: '',
   temperature: 0,
   temperatureMin: 0,
-  temperatureMax: 0
+  temperatureMax: 0,
+  name: ''
 };
 
 export function weather(state = initialState, action) {
@@ -15,7 +16,8 @@ export function weather(state = initialState, action) {
         icon: iconMapping[action.payload.weather[0].id],
         temperature: action.payload.main.temp,
         temperatureMin: action.payload.main.temp_min,
-        temperatureMax: action.payload.main.temp_max
+        temperatureMax: action.payload.main.temp_max,
+        name: action.payload.name
       };
     default:
       return state;

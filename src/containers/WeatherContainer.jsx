@@ -1,11 +1,5 @@
 import React from 'react';
 
-import {
-  TEMPERATURE_MESSAGE,
-  MIN_TEMPERATURE_MESSAGE,
-  MAX_TEMPERATURE_MESSAGE
-} from '../messages';
-
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchWeatherData } from '../actions';
 
@@ -22,10 +16,12 @@ const WeatherContainer = () => {
   const temperatureMin = useSelector(state => state.weather.temperatureMin);
   const temperatureMax = useSelector(state => state.weather.temperatureMax);
   const icon = useSelector(state => state.weather.icon);
+  const name = useSelector(state => state.weather.name);
 
   return (
     <Container>
       <SearchBox
+        name={name}
         placeholder="City"
         onChange={event => {
           onQueryChange({ q: event.target.value });
@@ -36,9 +32,6 @@ const WeatherContainer = () => {
         temperature={temperature}
         temperatureMin={temperatureMin}
         temperatureMax={temperatureMax}
-        temperatureMessage={TEMPERATURE_MESSAGE}
-        temperatureMinMessage={MIN_TEMPERATURE_MESSAGE}
-        temperatureMaxMessage={MAX_TEMPERATURE_MESSAGE}
       />
     </Container>
   );

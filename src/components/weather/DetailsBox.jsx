@@ -11,15 +11,7 @@ import WeatherIcon from './Icon';
 import Column from '../core/layout/Column';
 import Row from '../core/layout/Row';
 
-const Details = ({
-  icon,
-  temperature,
-  temperatureMin,
-  temperatureMax,
-  temperatureMessage,
-  temperatureMaxMessage,
-  temperatureMinMessage
-}) => {
+const Details = ({ icon, temperature, temperatureMin, temperatureMax }) => {
   return (
     <React.Fragment>
       <Column>
@@ -29,41 +21,33 @@ const Details = ({
       </Column>
       <Column>
         <Row>
-          <Text text={temperatureMessage} />
+          <Text text="Temperature" />
         </Row>
         <Row>
-          <Text text={temperatureMinMessage} />
+          <Text text="Temperature min" />
         </Row>
         <Row>
-          <Text text={temperatureMaxMessage} />
+          <Text text="Temperature max" />
         </Row>
       </Column>
       <Column>
         <Row>
           <strong>
             <TextNumber number={temperature} round="floor" />
+            <TextSymbol name="degreeCelcius" />
           </strong>
         </Row>
         <Row>
           <strong>
             <TextNumber number={temperatureMin} round="ceil" />
+            <TextSymbol name="degreeCelcius" />
           </strong>
         </Row>
         <Row>
           <strong>
             <TextNumber number={temperatureMax} round="floor" />
+            <TextSymbol name="degreeCelcius" />
           </strong>
-        </Row>
-      </Column>
-      <Column>
-        <Row>
-          <TextSymbol name="degreeCelcius" />
-        </Row>
-        <Row>
-          <TextSymbol name="degreeCelcius" />
-        </Row>
-        <Row>
-          <TextSymbol name="degreeCelcius" />
         </Row>
       </Column>
     </React.Fragment>
