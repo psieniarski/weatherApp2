@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Text = ({ text }) => {
-  return <span>{text}</span>;
+  return <React.Fragment>{text}</React.Fragment>;
 };
 
 Text.propTypes = {

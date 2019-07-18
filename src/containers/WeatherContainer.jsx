@@ -6,8 +6,12 @@ import { fetchWeatherData } from '../actions';
 import Container from '../components/core/layout/Container';
 import Column from '../components/core/layout/Column';
 import Row from '../components/core/layout/Row';
-import Icon from '../components/core/Icon';
+
+import Text from '../components/core/Text';
+import TextSymbol from '../components/core/TextSymbol';
+
 import TextInput from '../components/core/form/TextInput';
+import WeatherIcon from '../components/WeatherIcon';
 
 const WeatherContainer = props => {
   const dispatch = useDispatch();
@@ -32,21 +36,24 @@ const WeatherContainer = props => {
       </Column>
       <Column>
         <Row>
-          <Icon name={icon} />
+          <WeatherIcon name={icon} size="xl" />
         </Row>
       </Column>
       <Column>
         <Row>
-          Temperature: <strong>{temperature}&deg;C</strong>
-          <Icon />
+          <Text text="Temperature" />
+          <Text text={temperature} />
+          <TextSymbol name="degreeCelcius" />
         </Row>
         <Row>
-          Min temperature <strong>{temperatureMin}&deg;C</strong>
-          <Icon />
+          <Text text="Min temperature" />
+          <Text text={temperatureMin} />
+          <TextSymbol name="degreeCelcius" />
         </Row>
         <Row>
-          Max temperature <strong>{temperatureMax}&deg;C</strong>
-          <Icon />
+          <Text text="Max temperature" />
+          <Text text={temperatureMax} />
+          <TextSymbol name="degreeCelcius" />
         </Row>
       </Column>
     </Container>
