@@ -5,13 +5,18 @@ import Text from '../core/Text';
 import TextSymbol from '../core/TextSymbol';
 import TextNumber from '../core/TextNumber';
 
-import TextInput from '../core/form/TextInput';
 import WeatherIcon from './Icon';
 
 import Column from '../core/layout/Column';
 import Row from '../core/layout/Row';
 
-const DetailsBox = ({ icon, temperature, temperatureMin, temperatureMax }) => {
+const DetailsBox = ({
+  icon,
+  temperature,
+  temperatureMin,
+  temperatureMax,
+  temperatureUnit
+}) => {
   return (
     <React.Fragment>
       <Column>
@@ -34,19 +39,19 @@ const DetailsBox = ({ icon, temperature, temperatureMin, temperatureMax }) => {
         <Row>
           <strong>
             <TextNumber number={temperature} round="floor" />
-            <TextSymbol name="degreeCelcius" />
+            <TextSymbol name={temperatureUnit} />
           </strong>
         </Row>
         <Row>
           <strong>
             <TextNumber number={temperatureMin} round="ceil" />
-            <TextSymbol name="degreeCelcius" />
+            <TextSymbol name={temperatureUnit} />
           </strong>
         </Row>
         <Row>
           <strong>
             <TextNumber number={temperatureMax} round="floor" />
-            <TextSymbol name="degreeCelcius" />
+            <TextSymbol name={temperatureUnit} />
           </strong>
         </Row>
       </Column>
@@ -56,8 +61,9 @@ const DetailsBox = ({ icon, temperature, temperatureMin, temperatureMax }) => {
 
 DetailsBox.propTypes = {
   icon: PropTypes.string,
-  temperature: PropTypes.number,
-  temperatureMin: PropTypes.number,
-  temperatureMax: PropTypes.number
+  temperature: PropTypes.number.isRequired,
+  temperatureMin: PropTypes.number.isRequired,
+  temperatureMax: PropTypes.number.isRequired,
+  temperatureUnit: PropTypes.string.isRequired
 };
 export default DetailsBox;

@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const symbols = {
-  degree: '\u00B0',
-  degreeCelcius: '\u2103',
-  degreeFahrenheit: '\u2109'
+  celcius: '\u2103',
+  fahrenheit: '\u2109'
 };
 
 const TextSymbol = ({ name }) => {
@@ -12,8 +11,7 @@ const TextSymbol = ({ name }) => {
 };
 
 Text.propTypes = {
-  size: PropTypes.oneOf(['degree', 'degreeCelcius', 'degreeFahrenheit'])
-    .isRequired
+  name: PropTypes.oneOf(['celcius', 'fahrenheit']).isRequired
 };
 
 export default TextSymbol;
