@@ -8,7 +8,12 @@ import Container from '../components/core/layout/Container';
 import SearchBox from '../components/weather/SearchBox';
 import DetailsBox from '../components/weather/DetailsBox';
 
-const WeatherContainer = ({ temperatureUnit }) => {
+const WeatherContainer = ({
+  temperatureUnit,
+  temperatureLabel,
+  temperatureMinLabel,
+  temperatureMaxLabel
+}) => {
   const dispatch = useDispatch();
   const onQueryChange = ({ q }) => {
     dispatch(fetchWeatherData({ q, temperatureUnit }));
@@ -34,13 +39,19 @@ const WeatherContainer = ({ temperatureUnit }) => {
         temperatureMin={temperatureMin}
         temperatureMax={temperatureMax}
         temperatureUnit={temperatureUnit}
+        temperatureLabel={temperatureLabel}
+        temperatureMinLabel={temperatureMinLabel}
+        temperatureMaxLabel={temperatureMaxLabel}
       />
     </Container>
   );
 };
 
 WeatherContainer.propTypes = {
-  temperatureUnit: PropTypes.oneOf(['celcius', 'fahrenheit'])
+  temperatureUnit: PropTypes.oneOf(['celcius', 'fahrenheit']),
+  temperatureLabel: PropTypes.string.isRequired,
+  temperatureMinLabel: PropTypes.string.isRequired,
+  temperatureMaxLabel: PropTypes.string.isRequired
 };
 
 export default WeatherContainer;

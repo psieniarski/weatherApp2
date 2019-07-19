@@ -15,7 +15,10 @@ const DetailsBox = ({
   temperature,
   temperatureMin,
   temperatureMax,
-  temperatureUnit
+  temperatureUnit,
+  temperatureLabel,
+  temperatureMinLabel,
+  temperatureMaxLabel
 }) => {
   return (
     <React.Fragment>
@@ -26,13 +29,13 @@ const DetailsBox = ({
       </Column>
       <Column>
         <Row>
-          <Text text="Temperature" />
+          <Text text={temperatureLabel} />
         </Row>
         <Row>
-          <Text text="Temperature min" />
+          <Text text={temperatureMinLabel} />
         </Row>
         <Row>
-          <Text text="Temperature max" />
+          <Text text={temperatureMaxLabel} />
         </Row>
       </Column>
       <Column>
@@ -64,6 +67,9 @@ DetailsBox.propTypes = {
   temperature: PropTypes.number.isRequired,
   temperatureMin: PropTypes.number.isRequired,
   temperatureMax: PropTypes.number.isRequired,
-  temperatureUnit: PropTypes.string.isRequired
+  temperatureUnit: PropTypes.string.isRequired,
+  temperatureLabel: PropTypes.string.isRequired,
+  temperatureMinLabel: PropTypes.string.isRequired,
+  temperatureMaxLabel: PropTypes.string.isRequired
 };
 export default DetailsBox;
