@@ -1,3 +1,8 @@
+## WeatherApp
+
+Enviorment variable 
+REACT_APP_OPEN_WEATHER_MAP_APPID is obligatory. Please visit https://openweathermap.org/appid
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
