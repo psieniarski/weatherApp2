@@ -1,10 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Text from '../core/Text';
-import TextSymbol from '../core/TextSymbol';
-import TextNumber from '../core/TextNumber';
-
 import WeatherIcon from './Icon';
 import Temperature from './Temperature';
 
