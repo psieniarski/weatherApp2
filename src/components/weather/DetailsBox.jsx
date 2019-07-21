@@ -26,7 +26,7 @@ const DetailsBox = ({
       <p>
         <Temperature
           value={temperature}
-          label={temperatureMaxLabel}
+          label={temperatureLabel}
           unit={temperatureUnit}
         />
       </p>
