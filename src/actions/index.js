@@ -7,7 +7,7 @@ import {
 
 export const APP_ID = process.env.REACT_APP_OPEN_WEATHER_MAP_APPID || '';
 
-export function fetchWeatherData({ q = '', temperatureUnit } = {}) {
+export const fetchWeatherData = ({ q = '', temperatureUnit } = {}) => {
   const units = temperatureUnit === 'celcius' ? 'metric' : 'imperial';
   return {
     [RSAA]: {
@@ -20,4 +20,4 @@ export function fetchWeatherData({ q = '', temperatureUnit } = {}) {
       ]
     }
   };
-}
+};
