@@ -9,16 +9,7 @@ html {
 
 body {
   color: $base-color;
-  font-size: 12pt;
-}
-
-.container {
-  display: flex;
-  margin-top: 100px;
-}
-
-.column {
-  flex: 1;
+  font-size: 11pt;
 }
 
 .icon {
@@ -26,5 +17,9 @@ body {
 }
 
 .icon-xl {
-  font-size: 100pt;
+  font-size: 90pt;
+}
+
+.center-text {
+  text-align: center;
 }

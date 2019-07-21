@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Row = ({ children }) => {
-  return <div className="row">{children}</div>;
+const Row = ({ children, className }) => {
+  return <div className={`row ${className}`}>{children}</div>;
 };
 
 Row.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
-  ]).isRequired
+  ]).isRequired,
+  clasName: PropTypes.string
 };
 
 export default Row;

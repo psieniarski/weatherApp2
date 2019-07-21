@@ -11,6 +11,8 @@ function App() {
       temperatureLabel="Temperature"
       temperatureMinLabel="Temperature Min"
       temperatureMaxLabel="Temperature Max"
+      noResultsLabel="What your are looking for?"
+      resultsLabel="Weather data for"
     />
   );
 }

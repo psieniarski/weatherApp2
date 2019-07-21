@@ -6,9 +6,7 @@ import TextSymbol from '../core/TextSymbol';
 import TextNumber from '../core/TextNumber';
 
 import WeatherIcon from './Icon';
-
-import Column from '../core/layout/Column';
-import Row from '../core/layout/Row';
+import Temperature from './Temperature';
 
 const DetailsBox = ({
   icon,
@@ -22,42 +20,31 @@ const DetailsBox = ({
 }) => {
   return (
     <React.Fragment>
-      <Column>
-        <Row>
-          <WeatherIcon name={icon} size="xl" />
-        </Row>
-      </Column>
-      <Column>
-        <Row>
-          <Text text={temperatureLabel} />
-        </Row>
-        <Row>
-          <Text text={temperatureMinLabel} />
-        </Row>
-        <Row>
-          <Text text={temperatureMaxLabel} />
-        </Row>
-      </Column>
-      <Column>
-        <Row>
-          <strong>
-            <TextNumber number={temperature} round="floor" />
-            <TextSymbol name={temperatureUnit} />
-          </strong>
-        </Row>
-        <Row>
-          <strong>
-            <TextNumber number={temperatureMin} round="ceil" />
-            <TextSymbol name={temperatureUnit} />
-          </strong>
-        </Row>
-        <Row>
-          <strong>
-            <TextNumber number={temperatureMax} round="floor" />
-            <TextSymbol name={temperatureUnit} />
-          </strong>
-        </Row>
-      </Column>
+      <p>
+        <WeatherIcon name={icon} size="xl" />
+      </p>
+      <p>
+        <Text text={temperatureLabel} />
+        <span>: </span>
+        <strong>
+          <TextNumber number={temperature} round="floor" />
+          <TextSymbol name={temperatureUnit} />
+        </strong>
+      </p>
+      <p>
+        <Temperature
+          value={temperatureMax}
+          label={temperatureMaxLabel}
+          unit={temperatureUnit}
+        />
+      </p>
+      <p>
+        <Temperature
+          value={temperatureMin}
+          label={temperatureMinLabel}
+          unit={temperatureUnit}
+        />
+      </p>
     </React.Fragment>
   );
 };
