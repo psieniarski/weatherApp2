@@ -24,12 +24,11 @@ const DetailsBox = ({
         <WeatherIcon name={icon} size="xl" />
       </p>
       <p>
-        <Text text={temperatureLabel} />
-        <span>: </span>
-        <strong>
-          <TextNumber number={temperature} round="floor" />
-          <TextSymbol name={temperatureUnit} />
-        </strong>
+        <Temperature
+          value={temperature}
+          label={temperatureMaxLabel}
+          unit={temperatureUnit}
+        />
       </p>
       <p>
         <Temperature
