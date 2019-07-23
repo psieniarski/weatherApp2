@@ -11,14 +11,7 @@ import Container from '../components/core/layout/Container';
 import SearchBox from '../components/weather/SearchBox';
 import DetailsBox from '../components/weather/DetailsBox';
 
-const WeatherContainer = ({
-  temperatureUnit,
-  temperatureLabel,
-  temperatureMinLabel,
-  temperatureMaxLabel,
-  noResultsLabel,
-  resultsLabel
-}) => {
+const WeatherContainer = ({ temperatureUnit }) => {
   const dispatch = useDispatch();
   const temperature = useSelector(state => state.weather.temperature);
   const temperatureMin = useSelector(state => state.weather.temperatureMin);
