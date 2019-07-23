@@ -1,4 +1,4 @@
-import { FETCH_WEATHER_SUCCESS } from '../actions/actionTypes';
+import { FETCH_WEATHER_SUCCESS } from '../constants/actionTypes';
 import iconMapping from '../helpers/iconMapping';
 
 export const initialState = {

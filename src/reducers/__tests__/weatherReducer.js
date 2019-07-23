@@ -1,5 +1,5 @@
 import { weatherReducer, initialState } from '../weatherReducer';
-import { FETCH_WEATHER_SUCCESS } from '../../actions/actionTypes';
+import { FETCH_WEATHER_SUCCESS } from '../../constants/actionTypes';
 
 describe('weatherReducer', () => {
   it('should return the initial state', () => {

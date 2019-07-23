@@ -3,7 +3,7 @@ import {
   FETCH_WEATHER_REQUEST,
   FETCH_WEATHER_SUCCESS,
   FETCH_WEATHER_FAILURE
-} from './actionTypes';
+} from '../constants/actionTypes';
 
 export const APP_ID = process.env.REACT_APP_OPEN_WEATHER_MAP_APPID || '';
 

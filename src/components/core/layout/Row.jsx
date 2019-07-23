@@ -9,7 +9,7 @@ Row.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
-  ]).isRequired,
+  ]),
   clasName: PropTypes.string
 };
 

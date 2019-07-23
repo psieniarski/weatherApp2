@@ -4,12 +4,17 @@ import PropTypes from 'prop-types';
 import Text from '../core/Text';
 import TextInput from '../core/form/TextInput';
 
+import {
+  WEATHER_NO_RESULTS_LABEL,
+  WEATHER_RESULTS_LABEL
+} from '../../constants/labels';
+
 const SearchBox = ({
   onChange,
   placeholder,
   name,
-  noResultsLabel,
-  resultsLabel
+  noResultsLabel = WEATHER_NO_RESULTS_LABEL,
+  resultsLabel = WEATHER_RESULTS_LABEL
 }) => {
   return (
     <form>
@@ -27,7 +32,9 @@ const SearchBox = ({
 SearchBox.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
+  noResultsLabel: PropTypes.string,
+  resultsLabel: PropTypes.string
 };
 
 export default SearchBox;

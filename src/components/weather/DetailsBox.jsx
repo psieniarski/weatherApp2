@@ -4,15 +4,21 @@ import PropTypes from 'prop-types';
 import WeatherIcon from './Icon';
 import Temperature from './Temperature';
 
+import {
+  WEATHER_TEMPERATURE_LABEL,
+  WEATHER_TEMPERATURE_MIN_LABEL,
+  WEATHER_TEMPERATURE_MAX_LABEL
+} from '../../constants/labels';
+
 const DetailsBox = ({
   icon,
   temperature,
   temperatureMin,
   temperatureMax,
   temperatureUnit,
-  temperatureLabel,
-  temperatureMinLabel,
-  temperatureMaxLabel
+  temperatureLabel = WEATHER_TEMPERATURE_LABEL,
+  temperatureMinLabel = WEATHER_TEMPERATURE_MIN_LABEL,
+  temperatureMaxLabel = WEATHER_TEMPERATURE_MAX_LABEL
 }) => {
   return (
     <React.Fragment>
@@ -50,8 +56,8 @@ DetailsBox.propTypes = {
   temperatureMin: PropTypes.number.isRequired,
   temperatureMax: PropTypes.number.isRequired,
   temperatureUnit: PropTypes.string.isRequired,
-  temperatureLabel: PropTypes.string.isRequired,
-  temperatureMinLabel: PropTypes.string.isRequired,
-  temperatureMaxLabel: PropTypes.string.isRequired
+  temperatureLabel: PropTypes.string,
+  temperatureMinLabel: PropTypes.string,
+  temperatureMaxLabel: PropTypes.string
 };
 export default DetailsBox;

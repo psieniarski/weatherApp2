@@ -20,9 +20,6 @@ const WeatherContainer = ({
   resultsLabel
 }) => {
   const dispatch = useDispatch();
-  const onQueryChange = ({ q }) => {
-    dispatch(fetchWeatherData({ q, temperatureUnit }));
-  };
   const temperature = useSelector(state => state.weather.temperature);
   const temperatureMin = useSelector(state => state.weather.temperatureMin);
   const temperatureMax = useSelector(state => state.weather.temperatureMax);
@@ -39,26 +36,23 @@ const WeatherContainer = ({
           <SearchBox
             name={name}
             placeholder="City"
-            noResultsLabel={noResultsLabel}
-            resultsLabel={resultsLabel}
             onChange={event => {
-              onQueryChange({ q: event.target.value });
+              dispatch(
+                fetchWeatherData({ q: event.target.value, temperatureUnit })
+              );
             }}
           ></SearchBox>
         </Column>
       </Row>
       <Row>
         <Column className="center-text">
-          {name && (
+          {icon && (
             <DetailsBox
               icon={icon}
               temperature={temperature}
               temperatureMin={temperatureMin}
               temperatureMax={temperatureMax}
               temperatureUnit={temperatureUnit}
-              temperatureLabel={temperatureLabel}
-              temperatureMinLabel={temperatureMinLabel}
-              temperatureMaxLabel={temperatureMaxLabel}
             />
           )}
         </Column>
@@ -68,12 +62,7 @@ const WeatherContainer = ({
 };
 
 WeatherContainer.propTypes = {
-  temperatureUnit: PropTypes.oneOf(['celcius', 'fahrenheit']),
-  temperatureLabel: PropTypes.string.isRequired,
-  temperatureMinLabel: PropTypes.string.isRequired,
-  temperatureMaxLabel: PropTypes.string.isRequired,
-  resultsLabel: PropTypes.string.isRequired,
-  noResultsLabel: PropTypes.string.isRequired
+  temperatureUnit: PropTypes.oneOf(['celcius', 'fahrenheit'])
 };
 
 export default WeatherContainer;
