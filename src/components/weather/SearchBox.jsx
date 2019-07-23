@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Text from '../core/Text';
-import TextInput from '../core/form/TextInput';
 
 import {
   WEATHER_NO_RESULTS_LABEL,
@@ -24,7 +23,7 @@ const SearchBox = ({
           <Text text={name} />
         </strong>
       </label>
-      <TextInput type="text" placeholder={placeholder} onChange={onChange} />
+      <input type="text" placeholder={placeholder} onChange={onChange} />
     </form>
   );
 };
