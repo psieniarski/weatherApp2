@@ -5,7 +5,14 @@ import Text from '../core/Text';
 import TextSymbol from '../core/TextSymbol';
 import TextNumber from '../core/TextNumber';
 
-const Temperature = ({ value, label, unit, round = 'floor' }) => {
+import { WEATHER_TEMPERATURE_UNIT } from '../../constants/units';
+
+const Temperature = ({
+  value,
+  label,
+  unit = WEATHER_TEMPERATURE_UNIT,
+  round = 'floor'
+}) => {
   return (
     <React.Fragment>
       <Text text={label} />
@@ -20,8 +27,8 @@ const Temperature = ({ value, label, unit, round = 'floor' }) => {
 
 Temperature.propTypes = {
   value: PropTypes.number.isRequired,
-  label: PropTypes.string.isRequired,
-  unit: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  unit: PropTypes.string,
   round: PropTypes.oneOf(['floor', 'ceil'])
 };
 export default Temperature;

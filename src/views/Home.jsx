@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <SearchContainer />
-      <WeatherContainer temperatureUnit="celcius" />
+      <WeatherContainer />
     </React.Fragment>
   );
 };

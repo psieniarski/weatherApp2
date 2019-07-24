@@ -5,9 +5,14 @@ import {
   FETCH_WEATHER_FAILURE
 } from '../constants/actionTypes';
 
+import { WEATHER_TEMPERATURE_UNIT } from '../constants/units';
+
 export const APP_ID = process.env.REACT_APP_OPEN_WEATHER_MAP_APPID || '';
 
-export const fetchWeatherData = ({ q = '', temperatureUnit } = {}) => {
+export const fetchWeatherData = ({
+  q = '',
+  temperatureUnit = WEATHER_TEMPERATURE_UNIT
+}) => {
   const units = temperatureUnit === 'celcius' ? 'metric' : 'imperial';
   return {
     [RSAA]: {
