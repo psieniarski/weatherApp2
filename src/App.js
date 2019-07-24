@@ -1,11 +1,15 @@
 import React from 'react';
-
 import './styles/styles.scss';
+import { useRoutes } from 'hookrouter';
+import routes from './routes';
 
-import WeatherContainer from './containers/WeatherContainer';
+const NotFoundPage = () => {
+  return <p>Page not found.</p>;
+};
 
 function App() {
-  return <WeatherContainer temperatureUnit="celcius" />;
+  const routeResult = useRoutes(routes);
+  return routeResult || <NotFoundPage />;
 }
 
 export default App;
