@@ -31,7 +31,9 @@ const TemperatureContainer = ({
 };
 
 TemperatureContainer.propTypes = {
-  temperatureUnit: PropTypes.oneOf(['celcius', 'fahrenheit'])
+  temperatureLabel: PropTypes.string,
+  temperatureMaxLabel: PropTypes.string,
+  temperatureMinLabel: PropTypes.string
 };
 
 export default TemperatureContainer;

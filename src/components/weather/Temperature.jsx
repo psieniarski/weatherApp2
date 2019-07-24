@@ -5,13 +5,16 @@ import Text from '../core/Text';
 import TextSymbol from '../core/TextSymbol';
 import TextNumber from '../core/TextNumber';
 
-import { WEATHER_TEMPERATURE_UNIT } from '../../constants/units';
+import {
+  WEATHER_TEMPERATURE_UNIT,
+  WEATHER_TEMPERATURE_UNIT_ROUND_TYPE
+} from '../../constants/units';
 
 const Temperature = ({
   value,
   label,
   unit = WEATHER_TEMPERATURE_UNIT,
-  round = 'floor'
+  round = WEATHER_TEMPERATURE_UNIT_ROUND_TYPE
 }) => {
   return (
     <React.Fragment>

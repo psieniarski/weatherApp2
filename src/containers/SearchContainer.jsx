@@ -10,7 +10,6 @@ const SearchContainer = () => {
   return (
     <SearchBox
       name={name}
-      placeholder="City"
       onChange={event => {
         dispatch(fetchWeatherData({ q: event.target.value }));
       }}
