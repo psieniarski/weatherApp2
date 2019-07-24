@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import WeatherContainer from '../containers/TemperatureContainer';
 import SearchContainer from '../containers/SearchContainer';
 import { useDispatch } from 'react-redux';
@@ -15,6 +16,10 @@ const City = ({ name }) => {
       <WeatherContainer />
     </React.Fragment>
   );
+};
+
+City.propTypes = {
+  name: PropTypes.string
 };
 
 export default City;
