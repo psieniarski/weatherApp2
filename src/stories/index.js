@@ -23,9 +23,9 @@ storiesOf('core/TextSymbol', module)
   .add('Celcius', () => <TextSymbol name="celcius"></TextSymbol>)
   .add('Fahrenheit', () => <TextSymbol name="fahrenheit"></TextSymbol>);
 
-storiesOf('weather/Icon', module)
-  .add('Thunderstorm', () => <Icon name="wi-thunderstorm"></Icon>)
-  .add('Thunderstorm XL', () => <Icon name="wi-thunderstorm" size="xl"></Icon>);
+storiesOf('weather/Icon', module).add('Thunderstorm', () => (
+  <Icon iconId={200}></Icon>
+));
 
 storiesOf('weather/Temperature', module).add('Basic', () => (
   <Temperature value={10} label="Temperature"></Temperature>

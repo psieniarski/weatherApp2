@@ -31,13 +31,7 @@ Array [
 
 exports[`Storyshots weather/Icon Thunderstorm 1`] = `
 <i
-  className="wi wi-thunderstorm icon icon-undefined"
-/>
-`;
-
-exports[`Storyshots weather/Icon Thunderstorm XL 1`] = `
-<i
-  className="wi wi-thunderstorm icon icon-xl"
+  className="owf owf-200 owf-5x"
 />
 `;
 

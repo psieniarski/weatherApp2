@@ -20,7 +20,7 @@ describe('weatherReducer', () => {
         }
       })
     ).toEqual({
-      icon: 'wi-thunderstorm',
+      iconId: 201,
       temperature: 0,
       temperatureMin: 1,
       temperatureMax: 2,

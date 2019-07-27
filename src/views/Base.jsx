@@ -14,7 +14,7 @@ const Base = () => {
   return (
     <React.Fragment>
       <SearchContainer />
-      <WeatherIcon name={useSelector(state => state.weather.icon)} size="xl" />
+      <WeatherIcon iconId={useSelector(state => state.weather.iconId)} />
       <Temperature
         value={useSelector(state => state.weather.temperature)}
         label={WEATHER_TEMPERATURE_LABEL}

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import '../../styles/icon.scss';
 
-const Icon = ({ name, size }) => {
-  return <i className={`wi ${name} icon icon-${size}`}></i>;
+const Icon = ({ iconId }) => {
+  const iconClass = iconId ? `owf-${iconId}` : '';
+  return <i className={`owf ${iconClass} owf-5x`}></i>;
 };
 
 Icon.propTypes = {
-  name: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['sm', 'lg', 'xl'])
+  iconId: PropTypes.number.isRequired
 };
 
 export default Icon;
