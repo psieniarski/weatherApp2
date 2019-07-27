@@ -1,4 +1,3 @@
-@import '~weather-icons/css/weather-icons.css';
 @import '~milligram/dist/milligram.css';
 
 $base-color: #9b4dca;
@@ -14,10 +13,6 @@ body {
 
 .icon {
   color: $base-color;
-}
-
-.icon-xl {
-  font-size: 90pt;
 }
 
 .center-text {
