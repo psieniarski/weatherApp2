@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots core/SearchForm Basic 1`] = `
+<form>
+  <input
+    onChange={[Function]}
+    type="text"
+  />
+</form>
+`;
+
+exports[`Storyshots core/Text Basic 1`] = `"text"`;
+
+exports[`Storyshots core/TextNumber Basic 1`] = `"1"`;
+
+exports[`Storyshots core/TextSymbol Celcius 1`] = `
+Array [
+  " ",
+  "℃",
+  " ",
+]
+`;
+
+exports[`Storyshots core/TextSymbol Fahrenheit 1`] = `
+Array [
+  " ",
+  "℉",
+  " ",
+]
+`;
+
+exports[`Storyshots weather/Icon Thunderstorm 1`] = `
+<i
+  className="wi wi-thunderstorm icon icon-undefined"
+/>
+`;
+
+exports[`Storyshots weather/Icon Thunderstorm XL 1`] = `
+<i
+  className="wi wi-thunderstorm icon icon-xl"
+/>
+`;
+
+exports[`Storyshots weather/Temperature Basic 1`] = `
+Array [
+  "Temperature",
+  <span>
+    : 
+  </span>,
+  <strong>
+    10
+     
+    ℃
+     
+  </strong>,
+]
+`;
