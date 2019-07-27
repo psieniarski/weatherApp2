@@ -1,14 +1,8 @@
 import React from 'react';
-import WeatherContainer from '../containers/TemperatureContainer';
-import SearchContainer from '../containers/SearchContainer';
+import Base from './Base';
 
 const Home = () => {
-  return (
-    <React.Fragment>
-      <SearchContainer />
-      <WeatherContainer />
-    </React.Fragment>
-  );
+  return <Base />;
 };
 
 export default Home;
