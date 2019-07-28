@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import {
   WEATHER_NO_RESULTS_LABEL,
   WEATHER_RESULTS_LABEL

@@ -4,7 +4,6 @@ import WeatherIcon from '../components/weather/Icon';
 import Temperature from '../components/weather/Temperature';
 import SearchContainer from '../containers/SearchContainer';
 import LoaderContainer from '../containers/LoaderContainer';
-
 import {
   WEATHER_TEMPERATURE_LABEL,
   WEATHER_TEMPERATURE_MIN_LABEL,
