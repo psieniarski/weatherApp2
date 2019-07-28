@@ -24,7 +24,8 @@ describe('weatherReducer', () => {
       temperature: 0,
       temperatureMin: 1,
       temperatureMax: 2,
-      name: 'test'
+      name: 'test',
+      isFetching: false
     });
   });
 });
