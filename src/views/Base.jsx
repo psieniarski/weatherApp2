@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import WeatherIcon from '../components/weather/Icon';
 import Temperature from '../components/weather/Temperature';
 import SearchContainer from '../containers/SearchContainer';
-import Loader from '../components/core/Loader';
+import LoaderContainer from '../containers/LoaderContainer';
 
 import {
   WEATHER_TEMPERATURE_LABEL,
@@ -15,7 +15,7 @@ const Base = () => {
   const isFetching = useSelector(state => state.weather.isFetching);
   return (
     <React.Fragment>
-      {isFetching && <Loader />}
+      <LoaderContainer show={isFetching} />
       <SearchContainer />
       <WeatherIcon iconId={useSelector(state => state.weather.iconId)} />
       <Temperature
