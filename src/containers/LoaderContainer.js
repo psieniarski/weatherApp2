@@ -8,11 +8,7 @@ const LoaderContainer = ({ show }) => {
   const debouncedShow = useDebounce(show, DEBOUNCE_TIMEOUT);
 
   const style = { visibility: debouncedShow ? 'visible' : 'hidden' };
-  return (
-    <div className="fadeOut" style={style}>
-      Loading...
-    </div>
-  );
+  return <div style={style}>Loading...</div>;
 };
 
 LoaderContainer.propTypes = {
